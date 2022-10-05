@@ -21,8 +21,8 @@ It supports:
 - Connecting through the HTTP Proxy server
 - .NET 4.5 or later (includes compatible)</Description>
 
-    <PackageLicenseUrl>https://github.com/VC-Uralsystem/websocket-sharp/blob/master/LICENSE.txt</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/VC-Uralsystem/websocket-sharp</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/sta/websocket-sharp/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/VC-Uralsystem/websocket-sharp/tree/usm-fixes</PackageProjectUrl>
     <RepositoryUrl>https://github.com/VC-Uralsystem/websocket-sharp</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>websocket</PackageTags>
