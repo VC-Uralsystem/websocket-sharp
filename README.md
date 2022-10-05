@@ -4,9 +4,13 @@
  
  - солюшен и проекты сконвертированы MS Visual Studio 2022
  
- - проект websocket-sharp.csproj заменен на взятый из форка
+ - проект websocket-sharp.csproj заменён на взятый из форка
     WebSocketSharp-netstandard ( https://github.com/PingmanTools/websocket-sharp )
-   и немного подтюненый (таргетится только на net45 и netstandard2.0 , версия , урлы)
+   и немного подтюненный (таргетится только на net45 и netstandard2.0 , исправлены версия и урлы),
+   удалён AssemblyInfo.cs
+
+ - проекты example приложений заменены на простейшие Microsoft.NET.Sdk проекты,
+   таргетятся на net45 и net6.0, удалены AssemblyInfo.cs, работоспособность не проверялась
 
 
 
