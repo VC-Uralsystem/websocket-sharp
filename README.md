@@ -8,6 +8,14 @@
     WebSocketSharp-netstandard ( https://github.com/PingmanTools/websocket-sharp )
    и немного подтюненный (таргетится только на net45 и netstandard2.0 , исправлены версия и урлы),
    удалён AssemblyInfo.cs
+   
+ - в проекте websocket-sharp.csproj файлах WebSocket.cs и HttpStreamAsyncResult.cs изменения
+   аналогичные форку websocket-sharp-dotnet-core ( https://github.com/Abdelghani-Ben/websocket-sharp ).
+   на .NetCore методы делегата BeginInvoke() EndInvoke() не реализованы и швыряют исключение PlatformNotSupported.
+   их использование заменено на await Task.Run(() => вызов делегата).
+   исправленные методы стали async void , да это Анти паттерн, но кажется 
+   myDelegate.BeginInvoke(..., ar => myDelegate.EndInvoke(ar), null) - точно так же
+   проглотит информацию об ошибках (!!!надо это проверить).
 
  - проекты example приложений заменены на простейшие Microsoft.NET.Sdk проекты,
    таргетятся на net45 и net6.0, удалены AssemblyInfo.cs, работоспособность не проверялась
