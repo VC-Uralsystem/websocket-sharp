@@ -1,3 +1,15 @@
+## Uralsystem: ##
+
+ - собираем в ветке usm-fixes , на 05.10.2022 она отпачкована от коммита 5a7a9d6 от 02.10.2022 11:52:32
+ 
+ - солюшен и проекты сконвертированы MS Visual Studio 2022
+ 
+ - проект websocket-sharp.csproj заменен на взятый из форка
+    WebSocketSharp-netstandard ( https://github.com/PingmanTools/websocket-sharp )
+   и немного подтюненый (таргетится только на net45 и netstandard2.0 , версия , урлы)
+
+
+
 ![Logo](websocket-sharp_logo.png)
 
 ## Welcome to websocket-sharp! ##
