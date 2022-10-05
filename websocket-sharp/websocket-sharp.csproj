@@ -6,7 +6,7 @@
     <AssemblyOriginatorKeyFile>websocket-sharp.snk</AssemblyOriginatorKeyFile>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\websocket-sharp.xml</DocumentationFile>
     <Copyright>sta.blockhead</Copyright>
-    <Version>1.0.2.100</Version>
+    <Version>1.0.2.101</Version>
     <Company />
     <Authors>sta</Authors>
     <Description>websocket-sharp provides the WebSocket protocol client and server.
