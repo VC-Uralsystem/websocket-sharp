@@ -164,9 +164,11 @@ namespace WebSocketSharp.Net
 
     #region Internal Methods
 
-    internal void Complete ()
+    internal async void Complete ()
     {
-      lock (_sync) {
+      Task callbackTask = null;
+      lock (_sync) 
+      {
         if (_completed)
           return;
 
@@ -176,14 +178,18 @@ namespace WebSocketSharp.Net
           _waitHandle.Set ();
 
         if (_callback != null)
-           Task.Run(() => _callback.Invoke(this));
+          callbackTask = Task.Run(() => _callback.Invoke(this));
           // _callback.BeginInvoke (this, ar => _callback.EndInvoke (ar), null);
       }
+      if (callbackTask != null)
+        await callbackTask;
     }
 
-    internal void Complete (Exception exception)
+    internal async void Complete (Exception exception)
     {
-      lock (_sync) {
+      Task callbackTask = null;
+      lock (_sync)
+      {
         if (_completed)
           return;
 
@@ -194,9 +200,11 @@ namespace WebSocketSharp.Net
           _waitHandle.Set ();
 
         if (_callback != null)
-          Task.Run(() => _callback.Invoke(this));
+          callbackTask = Task.Run(() => _callback.Invoke(this));
           // _callback.BeginInvoke (this, ar => _callback.EndInvoke (ar), null);
       }
+      if (callbackTask != null)
+        await callbackTask;
     }
 
     #endregion

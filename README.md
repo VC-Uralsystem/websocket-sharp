@@ -14,8 +14,8 @@
    на .NetCore методы делегата BeginInvoke() EndInvoke() не реализованы и швыряют исключение PlatformNotSupported.
    их использование заменено на await Task.Run(() => вызов делегата).
    исправленные методы стали async void , да это Анти паттерн, но кажется 
-   myDelegate.BeginInvoke(..., ar => myDelegate.EndInvoke(ar), null) - точно так же
-   проглотит информацию об ошибках (!!!надо это проверить).
+   myDelegate.BeginInvoke(..., ar => myDelegate.EndInvoke(ar), null) - работает
+   практически так же - в случае необработанного исключения свалит приложение.
 
  - проекты example приложений заменены на простейшие Microsoft.NET.Sdk проекты,
    таргетятся на net45 и net6.0, удалены AssemblyInfo.cs, работоспособность не проверялась
